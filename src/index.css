@@ -1,13 +1,75 @@
+/* src/index.css */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav {
+  background-color: #0b3d91;
+  color: white;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.container {
+  padding: 1rem;
+}
+
+form {
+  max-width: 400px;
+}
+/* Navbar styles (src/index.css or src/components/Navbar.css) */
+.navbar {
+  background-color: #0b3d91;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links a {
+  margin-right: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+input, textarea, select, button {
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 500px;
+}
+
+button {
+  background-color: #2e6da4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  padding: 8px 12px;
+  font-size: 14px;
+  width: auto;
+}
+
+button:hover {
+  background-color: #204d74;
 }

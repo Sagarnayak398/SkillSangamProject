@@ -1,0 +1,125 @@
+/* Hero section styles */
+.hero-section {
+  position: relative;
+  min-height: 70vh;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 3rem 1rem;
+  overflow: hidden;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 50, 0.6);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 1s ease forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.animate-fade-in-up.delay-1 {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Feature cards */
+.feature-card {
+  background: white;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feature-card:hover,
+.feature-card:focus {
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+  transform: translateY(-10px);
+  outline: none;
+}
+
+.feature-icon {
+  user-select: none;
+}
+
+/* Stats */
+.stats-section {
+  background: #f9f9f9;
+}
+
+.stat-number {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 0.3rem;
+  color: #555;
+}
+
+/* Testimonials */
+.testimonials-section blockquote {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* Fixed SOS Button */
+.fixed-sos-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  font-size: 1.8rem;
+  animation: pulseSOS 2s infinite;
+  z-index: 1100;
+}
+
+@keyframes pulseSOS {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 15px 15px rgba(220, 53, 69, 0);
+  }
+}
